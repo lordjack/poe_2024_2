@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      // alert("Hello World");
+      console.log("Hello World");
+
+      function mensagem(mensagem) {
+        let palavras = mensagem.split(" ");
+
+        for (let i = palavras.length - 1; i > 0; i--) {
+          let indice = Math.floor(Math.random() * (i + 1));
+          [palavras[i], palavras[indice]] = [palavras[indice], palavras[i]];
+        }
+
+        let textoEmbaralhado = palavras.join(" ");
+
+        //console.log(palavras);
+        console.log(textoEmbaralhado);
+      }
+
+      mensagem("Prof. Jackson Five Chapecó");
+
+      var idades = [15, 17, 30, 42, 50];
+
+      console.log("For 01 - Pessoas de maior")
+      for (let i = 0; i < idades.length; i++) {
+        if(idades[i]>=18){
+            console.log(idades[i]);
+        }
+      }
+
+      console.log("For 02 - Pessoas de menor")
+      for(let i in idades){
+        if(idades[i]<=18){
+            console.log(idades[i]);
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
